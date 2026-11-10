@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dra. Eva Maria Herrera Bravo · Médica cirujana | Consultorio y teleconsulta</title>
+  <meta name="description" content="Dra. Eva Maria Herrera Bravo, médica cirujana. Atención en consultorio y teleconsulta, con tiempo para escucharlo, explicaciones claras y seguimiento personalizado.">
+  <meta name="theme-color" content="#FAFAF8">
+
+  <!-- Open Graph (vista previa al compartir en WhatsApp / redes) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dra. Eva Maria Herrera Bravo · Médica cirujana">
+  <meta property="og:description" content="Atención en consultorio y teleconsulta. Su salud, en manos expertas y cercanas.">
+  <meta property="og:image" content="img/dra-herrera.jpg">
+  <meta property="og:locale" content="es_AR">
+
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="brand" aria-label="Dra. Eva Herrera, ir al inicio">
+        <span class="dot brand__dot" aria-hidden="true"></span>
+        Dra. Eva Herrera
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <a class="link" href="#modalidades">Modalidades</a>
+        <a class="link" href="#sobre">La doctora</a>
+        <a class="link" href="#como">Cómo funciona</a>
+        <a class="link" href="#preguntas">Preguntas</a>
+        <a class="btn btn--dark btn--sm" href="#contacto">Solicitar turno</a>
+      </nav>
+
+      <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menú móvil (fijo, no empuja el contenido) -->
+  <nav class="mobile-menu" id="menu-movil" aria-label="Menú móvil" hidden>
+    <a class="mobile-menu__item" href="#modalidades">Modalidades</a>
+    <a class="mobile-menu__item" href="#sobre">La doctora</a>
+    <a class="mobile-menu__item" href="#como">Cómo funciona</a>
+    <a class="mobile-menu__item" href="#preguntas">Preguntas</a>
+    <a class="btn btn--dark mobile-menu__cta" href="#contacto">Solicitar turno <span class="arrow">→</span></a>
+  </nav>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="container hero" id="inicio" aria-labelledby="hero-title">
+      <header class="hero__text">
+        <p class="eyebrow rise d1">Médica cirujana · Cirugía general</p>
+        <h1 class="hero__title rise d2" id="hero-title">Su salud, en manos<br><span class="accent">expertas y cercanas.</span></h1>
+        <p class="hero__lead rise d3">Soy la Dra. Eva Maria Herrera Bravo, médica cirujana. Atiendo en mi consultorio y por videollamada, con el tiempo necesario para escucharlo, explicarle cada paso con claridad y acompañarlo hasta su recuperación.</p>
+        <div class="hero__actions rise d4">
+          <a class="btn btn--dark" href="#contacto">Solicitar teleconsulta <span class="arrow">→</span></a>
+          <a class="btn btn--line" href="#modalidades">Turno en consultorio</a>
+        </div>
+        <p class="hero__trust rise d5">Atención personalizada · Explicaciones claras · Seguimiento después de cada consulta</p>
+      </header>
+
+      <!-- Latido animado (solo desktop) -->
+      <div class="hero__visual rise d5" aria-hidden="true">
+        <div class="pulse">
+          <div class="pulse__ring"></div>
+          <div class="pulse__ring pulse__ring--2"></div>
+          <div class="pulse__disc"></div>
+          <svg class="pulse__svg" viewBox="0 0 400 160">
+            <path class="ecg-base" d="M0 80 H120 L138 80 L150 40 L164 128 L178 20 L194 112 L206 80 H260 L272 70 L284 80 H400"/>
+            <path class="ecg" d="M0 80 H120 L138 80 L150 40 L164 128 L178 20 L194 112 L206 80 H260 L272 70 L284 80 H400"/>
+          </svg>
+          <div class="pulse__badge"><span class="dot"></span>Teleconsulta desde su casa</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CINTA ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Consulta presencial</span><i>·</i><span>Teleconsulta</span><i>·</i><span>Evaluación quirúrgica</span><i>·</i><span>Control postoperatorio</span><i>·</i><span>Segunda opinión</span><i>·</i><span>Revisión de estudios</span><i>·</i><span>Seguimiento personalizado</span><i>·</i>
+        <span>Consulta presencial</span><i>·</i><span>Teleconsulta</span><i>·</i><span>Evaluación quirúrgica</span><i>·</i><span>Control postoperatorio</span><i>·</i><span>Segunda opinión</span><i>·</i><span>Revisión de estudios</span><i>·</i><span>Seguimiento personalizado</span><i>·</i>
+      </div>
+    </div>
+
+    <!-- ============ MODALIDADES ============ -->
+    <section class="container section" id="modalidades" aria-labelledby="modalidades-title">
+      <header class="section__head reveal">
+        <hgroup class="section__titles">
+          <p class="eyebrow">01 — Modalidades</p>
+          <h2 class="h2" id="modalidades-title">Elija cómo prefiere<br>ser atendido.</h2>
+        </hgroup>
+        <p class="section__intro">Presencial o a distancia, recibe la misma dedicación: una consulta sin apuros, un diagnóstico claro y un plan pensado para usted.</p>
+      </header>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__top">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M10 21v-5h4v5"/><path d="M12 8v4M10 10h4"/></svg>
+            <span class="tag">Presencial</span>
+          </div>
+          <div class="card__body">
+            <h3 class="h3">Consulta en consultorio</h3>
+            <p>Lo indicado cuando se necesita un examen físico completo, una evaluación antes de una cirugía, curaciones o controles posteriores a una operación.</p>
+          </div>
+          <ul class="specs">
+            <li><span>Dirección</span><span>[DIRECCIÓN DEL CONSULTORIO]</span></li>
+            <li><span>Horarios</span><span>[DÍAS Y HORARIOS]</span></li>
+            <li><span>Honorarios</span><span>[VALOR CONSULTA]</span></li>
+          </ul>
+          <a class="btn btn--line btn--sm card__cta" href="#contacto">Solicitar turno presencial <span class="arrow">→</span></a>
+        </article>
+
+        <article class="card card--dark reveal">
+          <div class="card__top">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="14" height="14" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg>
+            <span class="tag">Online</span>
+          </div>
+          <div class="card__body">
+            <h3 class="h3">Teleconsulta</h3>
+            <p>Consulte sin moverse de su casa: sin viajes ni salas de espera. Ideal para una primera consulta, revisar estudios, pedir una segunda opinión o continuar su seguimiento.</p>
+          </div>
+          <p class="price">
+            <span class="price__value">$40.000</span>
+            <span class="price__note">honorarios vigentes durante noviembre de 2026</span>
+          </p>
+          <ul class="specs">
+            <li><span>Pago</span><span>Antes de la consulta</span></li>
+            <li><span>Qué necesita</span><span>Celular o computadora con cámara</span></li>
+            <li><span>Medios</span><span>Transferencia · Mercado Pago</span></li>
+          </ul>
+          <a class="btn btn--light btn--sm card__cta" href="#contacto">Solicitar teleconsulta <span class="arrow">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ LA DOCTORA ============ -->
+    <section class="about-wrap" id="sobre" aria-labelledby="sobre-title">
+      <div class="container section about">
+        <figure class="about__photo unclip">
+          <img src="img/dra-herrera.jpg" alt="La Dra. Eva Maria Herrera Bravo con guardapolvo blanco en su consultorio" width="720" height="998" loading="lazy">
+        </figure>
+        <div class="about__text reveal">
+          <p class="eyebrow">02 — La doctora</p>
+          <h2 class="h2" id="sobre-title">Dra. Eva Maria<br>Herrera Bravo</h2>
+          <p class="about__role">Médica cirujana · Cirugía general · [MATRÍCULA N.º]</p>
+          <p>Cada paciente merece mucho más que un diagnóstico: merece entender qué le pasa, conocer sus opciones y sentirse acompañado en cada decisión.</p>
+          <p>Mi compromiso es ofrecerle una medicina rigurosa y actualizada, con trato humano y explicaciones claras, sin palabras difíciles ni apuros. Estoy presente antes, durante y después de cada tratamiento.</p>
+          <p>[FORMACIÓN: UNIVERSIDAD, ESPECIALIZACIÓN Y AÑOS DE EXPERIENCIA]</p>
+          <ul class="chips" aria-label="Áreas de atención">
+            <li><span>Cirugía general</span></li>
+            <li><span>Evaluación prequirúrgica</span></li>
+            <li><span>Control postoperatorio</span></li>
+            <li><span>Teleconsulta</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO FUNCIONA ============ -->
+    <section class="container section" id="como" aria-labelledby="como-title">
+      <header class="section__head reveal">
+        <hgroup class="section__titles">
+          <p class="eyebrow">03 — Cómo funciona</p>
+          <h2 class="h2" id="como-title">Atenderse es simple:<br>cuatro pasos.</h2>
+        </hgroup>
+        <div class="tabs" role="tablist" aria-label="Modalidad">
+          <button class="tab is-active" role="tab" id="tab-tele" aria-selected="true" aria-controls="steps-tele" type="button">Teleconsulta</button>
+          <button class="tab" role="tab" id="tab-pres" aria-selected="false" aria-controls="steps-pres" type="button" tabindex="-1">Consultorio</button>
+        </div>
+      </header>
+
+      <ol class="steps" id="steps-tele" role="tabpanel" aria-labelledby="tab-tele">
+        <li class="reveal"><span class="steps__n">01</span><h3>Contáctese</h3><p>Escríbame por WhatsApp contándome su consulta. Le respondo para coordinar el día y horario que mejor le queden.</p></li>
+        <li class="reveal"><span class="steps__n">02</span><h3>Confirme su turno</h3><p>Abone la consulta por transferencia o Mercado Pago. El pago se realiza antes de la cita.</p></li>
+        <li class="reveal"><span class="steps__n">03</span><h3>Reciba el enlace</h3><p>Le envío por WhatsApp un enlace simple. Solo tiene que tocarlo a la hora acordada.</p></li>
+        <li class="reveal"><span class="steps__n">04</span><h3>Consulta y plan</h3><p>Conversamos por video, revisamos sus estudios y se lleva indicaciones claras y un plan a seguir.</p></li>
+      </ol>
+
+      <ol class="steps" id="steps-pres" role="tabpanel" aria-labelledby="tab-pres" hidden>
+        <li><span class="steps__n">01</span><h3>Contáctese</h3><p>Escríbame por WhatsApp y coordinamos el día y horario que le resulten más cómodos.</p></li>
+        <li><span class="steps__n">02</span><h3>Confirme su turno</h3><p>Le envío la dirección del consultorio y lo que conviene llevar a la consulta.</p></li>
+        <li><span class="steps__n">03</span><h3>Traiga sus estudios</h3><p>Análisis, imágenes o informes previos permiten una evaluación más completa.</p></li>
+        <li><span class="steps__n">04</span><h3>Diagnóstico y plan</h3><p>Una evaluación completa y un plan claro, explicado con calma y sin apuros.</p></li>
+      </ol>
+    </section>
+
+    <!-- ============ PREGUNTAS ============ -->
+    <section class="faq-wrap" id="preguntas" aria-labelledby="preguntas-title">
+      <div class="container section faq">
+        <hgroup class="faq__head reveal">
+          <p class="eyebrow">04 — Preguntas</p>
+          <h2 class="h2" id="preguntas-title">Respuestas claras a sus dudas.</h2>
+        </hgroup>
+        <div class="faq__list reveal">
+          <details>
+            <summary>No me llevo bien con la tecnología. ¿Puedo hacer una teleconsulta?<span class="plus" aria-hidden="true">+</span></summary>
+            <p>Sí, y es más sencillo de lo que parece. Solo necesita un celular o computadora con cámara y conexión a internet. Le envío un enlace por WhatsApp: lo toca a la hora acordada y ya estamos conectados. Si lo prefiere, un familiar puede acompañarlo durante la consulta.</p>
+          </details>
+          <details>
+            <summary>¿Cómo y cuándo se abona la teleconsulta?<span class="plus" aria-hidden="true">+</span></summary>
+            <p>El pago se realiza antes de la consulta, por transferencia bancaria o Mercado Pago. Durante noviembre de 2026 los honorarios son de $40.000. Una vez acreditado el pago, le envío el enlace de la videollamada.</p>
+          </details>
+          <details>
+            <summary>¿Una teleconsulta es tan completa como una consulta presencial?<span class="plus" aria-hidden="true">+</span></summary>
+            <p>Para muchas consultas, sí: permite conversar con tranquilidad, revisar sus estudios y definir un plan. Si su caso requiere un examen físico, una curación o un control después de una cirugía, se lo indico y coordinamos una visita al consultorio.</p>
+          </details>
+          <details>
+            <summary>¿Atiende urgencias por teleconsulta?<span class="plus" aria-hidden="true">+</span></summary>
+            <p>No. Ante una urgencia, diríjase a la guardia más cercana o comuníquese con el servicio de emergencias.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="contact-wrap" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="contact reveal">
+          <svg class="contact__ecg" viewBox="0 0 400 160" aria-hidden="true">
+            <path class="ecg" d="M0 80 H120 L138 80 L150 40 L164 128 L178 20 L194 112 L206 80 H260 L272 70 L284 80 H400"/>
+          </svg>
+          <header class="contact__text">
+            <h2 class="contact__title" id="contacto-title">Su próxima consulta,<br>a un mensaje de distancia.</h2>
+            <p>Escríbame por WhatsApp y coordinamos juntos el día y la modalidad que le resulten más cómodos. Le respondo personalmente.</p>
+          </header>
+          <address class="contact__actions">
+            <!-- Reemplazar 549XXXXXXXXXX por el número con código de país, sin + ni espacios -->
+            <a class="btn btn--light" href="https://wa.me/549XXXXXXXXXX?text=Hola%20Dra.%20Herrera%2C%20quisiera%20solicitar%20un%20turno." target="_blank" rel="noopener">Escribir por WhatsApp <span class="arrow">→</span></a>
+            <a class="btn btn--ghost" href="mailto:[EMAIL]">[EMAIL DE CONTACTO]</a>
+          </address>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> Dra. Eva Maria Herrera Bravo · Médica cirujana</p>
+      <nav class="footer__links" aria-label="Enlaces del pie de página">
+        <a class="link" href="https://instagram.com/[USUARIO]" target="_blank" rel="noopener">Instagram</a>
+        <a class="link" href="#inicio">Volver arriba ↑</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
