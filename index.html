@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=2026-11-10">
 </head>
 <body>
 
@@ -114,11 +114,11 @@
             <h3 class="h3">Visita en consultorio</h3>
             <p>Lo indicado cuando se necesita un examen físico completo, una evaluación antes de una cirugía, curaciones o controles posteriores a una operación.</p>
           </div>
-          <ul class="specs">
-            <li><span>Dirección</span><span>[DIRECCIÓN DEL CONSULTORIO]</span></li>
-            <li><span>Horarios</span><span>[DÍAS Y HORARIOS]</span></li>
-            <li><span>Honorarios</span><span>[VALOR CONSULTA]</span></li>
-          </ul>
+          <dl class="specs">
+            <div><dt>Dirección</dt><dd>[DIRECCIÓN DEL CONSULTORIO]</dd></div>
+            <div><dt>Horarios</dt><dd>[DÍAS Y HORARIOS]</dd></div>
+            <div><dt>Honorarios</dt><dd>[VALOR CONSULTA]</dd></div>
+          </dl>
           <a class="btn btn--line btn--sm card__cta" href="#contacto">Solicitar turno presencial <span class="arrow">→</span></a>
         </article>
 
@@ -132,14 +132,14 @@
             <p>Consulte sin moverse de su casa: sin viajes ni salas de espera. Ideal para una primera consulta, revisar estudios, pedir una segunda opinión o continuar su seguimiento.</p>
           </div>
           <p class="price">
-            <span class="price__value">$40.000</span>
-            <span class="price__note">honorarios vigentes durante noviembre de 2026</span>
+            <data class="price__value" value="40000">$40.000</data>
+            <span class="price__note">honorarios vigentes durante <time datetime="2026-11">noviembre de 2026</time></span>
           </p>
-          <ul class="specs">
-            <li><span>Pago</span><span>Antes de la consulta</span></li>
-            <li><span>Qué necesita</span><span>Celular o computadora con cámara</span></li>
-            <li><span>Medios</span><span>Mercado Pago · alias jose.alvarez.mp</span></li>
-          </ul>
+          <dl class="specs">
+            <div><dt>Pago</dt><dd>Antes de la consulta</dd></div>
+            <div><dt>Qué necesita</dt><dd>Celular o computadora con cámara</dd></div>
+            <div><dt>Medios</dt><dd>Mercado Pago · alias jose.alvarez.mp</dd></div>
+          </dl>
           <a class="btn btn--light btn--sm card__cta" href="#contacto">Solicitar teleconsulta <span class="arrow">→</span></a>
         </article>
       </div>
@@ -182,17 +182,17 @@
       </header>
 
       <ol class="steps" id="steps-tele" role="tabpanel" aria-labelledby="tab-tele">
-        <li class="reveal"><span class="steps__n">01</span><h3>Contáctese</h3><p>Escríbame por WhatsApp contándome su consulta. Le respondo para coordinar el día y horario que mejor le queden.</p></li>
-        <li class="reveal"><span class="steps__n">02</span><h3>Confirme su turno</h3><p>Abone $40.000 por Mercado Pago al alias <a class="link" href="#pago">jose.alvarez.mp</a>. El pago se realiza antes de la cita.</p></li>
-        <li class="reveal"><span class="steps__n">03</span><h3>Reciba el enlace</h3><p>Le envío por WhatsApp un enlace simple. Solo tiene que tocarlo a la hora acordada.</p></li>
-        <li class="reveal"><span class="steps__n">04</span><h3>Consulta y plan</h3><p>Conversamos por video, revisamos sus estudios y se lleva indicaciones claras y un plan a seguir.</p></li>
+        <li class="reveal"><span class="steps__n" aria-hidden="true">01</span><h3>Contáctese</h3><p>Escríbame por WhatsApp contándome su consulta. Le respondo para coordinar el día y horario que mejor le queden.</p></li>
+        <li class="reveal"><span class="steps__n" aria-hidden="true">02</span><h3>Confirme su turno</h3><p>Abone $40.000 por Mercado Pago al alias <a class="link" href="#pago">jose.alvarez.mp</a>. El pago se realiza antes de la cita.</p></li>
+        <li class="reveal"><span class="steps__n" aria-hidden="true">03</span><h3>Reciba el enlace</h3><p>Le envío por WhatsApp un enlace simple. Solo tiene que tocarlo a la hora acordada.</p></li>
+        <li class="reveal"><span class="steps__n" aria-hidden="true">04</span><h3>Consulta y plan</h3><p>Conversamos por video, revisamos sus estudios y se lleva indicaciones claras y un plan a seguir.</p></li>
       </ol>
 
       <ol class="steps" id="steps-pres" role="tabpanel" aria-labelledby="tab-pres" hidden>
-        <li><span class="steps__n">01</span><h3>Contáctese</h3><p>Escríbame por WhatsApp y coordinamos el día y horario que le resulten más cómodos.</p></li>
-        <li><span class="steps__n">02</span><h3>Confirme su turno</h3><p>Le envío la dirección del consultorio y lo que conviene llevar a la consulta.</p></li>
-        <li><span class="steps__n">03</span><h3>Traiga sus estudios</h3><p>Análisis, imágenes o informes previos permiten una evaluación más completa.</p></li>
-        <li><span class="steps__n">04</span><h3>Diagnóstico y plan</h3><p>Una evaluación completa y un plan claro, explicado con calma y sin apuros.</p></li>
+        <li><span class="steps__n" aria-hidden="true">01</span><h3>Contáctese</h3><p>Escríbame por WhatsApp y coordinamos el día y horario que le resulten más cómodos.</p></li>
+        <li><span class="steps__n" aria-hidden="true">02</span><h3>Confirme su turno</h3><p>Le envío la dirección del consultorio y lo que conviene llevar a la consulta.</p></li>
+        <li><span class="steps__n" aria-hidden="true">03</span><h3>Traiga sus estudios</h3><p>Análisis, imágenes o informes previos permiten una evaluación más completa.</p></li>
+        <li><span class="steps__n" aria-hidden="true">04</span><h3>Diagnóstico y plan</h3><p>Una evaluación completa y un plan claro, explicado con calma y sin apuros.</p></li>
       </ol>
     </section>
 
@@ -258,7 +258,7 @@
         <div class="pay__box reveal">
           <div class="pay__row">
             <span class="pay__label">Monto</span>
-            <span class="pay__amount">$40.000</span>
+            <data class="pay__amount" value="40000">$40.000</data>
           </div>
           <div class="pay__row">
             <span class="pay__label">Alias de Mercado Pago</span>
@@ -301,7 +301,7 @@
           </details>
           <details>
             <summary>¿Cómo y cuándo se abona la teleconsulta?<span class="plus" aria-hidden="true">+</span></summary>
-            <p>El pago se realiza antes de la consulta, por Mercado Pago al alias jose.alvarez.mp (<a class="link" href="#pago">ver datos de pago</a>). Durante noviembre de 2026 los honorarios son de $40.000. Una vez acreditado el pago, le envío el enlace de la videollamada.</p>
+            <p>El pago se realiza antes de la consulta, por Mercado Pago al alias jose.alvarez.mp (<a class="link" href="#pago">ver datos de pago</a>). Durante <time datetime="2026-11">noviembre de 2026</time> los honorarios son de $40.000. Una vez acreditado el pago, le envío el enlace de la videollamada.</p>
           </details>
           <details>
             <summary>¿Una teleconsulta es tan completa como una consulta presencial?<span class="plus" aria-hidden="true">+</span></summary>
@@ -348,6 +348,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=2026-11-10" defer></script>
 </body>
 </html>
