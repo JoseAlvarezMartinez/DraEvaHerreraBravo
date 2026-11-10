@@ -136,7 +136,7 @@
           <ul class="specs">
             <li><span>Pago</span><span>Antes de la consulta</span></li>
             <li><span>Qué necesita</span><span>Celular o computadora con cámara</span></li>
-            <li><span>Medios</span><span>Transferencia · Mercado Pago</span></li>
+            <li><span>Medios</span><span>Mercado Pago · alias jose.alvarez.mp</span></li>
           </ul>
           <a class="btn btn--light btn--sm card__cta" href="#contacto">Solicitar teleconsulta <span class="arrow">→</span></a>
         </article>
@@ -181,7 +181,7 @@
 
       <ol class="steps" id="steps-tele" role="tabpanel" aria-labelledby="tab-tele">
         <li class="reveal"><span class="steps__n">01</span><h3>Contáctese</h3><p>Escríbame por WhatsApp contándome su consulta. Le respondo para coordinar el día y horario que mejor le queden.</p></li>
-        <li class="reveal"><span class="steps__n">02</span><h3>Confirme su turno</h3><p>Abone la consulta por transferencia o Mercado Pago. El pago se realiza antes de la cita.</p></li>
+        <li class="reveal"><span class="steps__n">02</span><h3>Confirme su turno</h3><p>Abone $40.000 por Mercado Pago al alias <a class="link" href="#pago">jose.alvarez.mp</a>. El pago se realiza antes de la cita.</p></li>
         <li class="reveal"><span class="steps__n">03</span><h3>Reciba el enlace</h3><p>Le envío por WhatsApp un enlace simple. Solo tiene que tocarlo a la hora acordada.</p></li>
         <li class="reveal"><span class="steps__n">04</span><h3>Consulta y plan</h3><p>Conversamos por video, revisamos sus estudios y se lleva indicaciones claras y un plan a seguir.</p></li>
       </ol>
@@ -192,6 +192,47 @@
         <li><span class="steps__n">03</span><h3>Traiga sus estudios</h3><p>Análisis, imágenes o informes previos permiten una evaluación más completa.</p></li>
         <li><span class="steps__n">04</span><h3>Diagnóstico y plan</h3><p>Una evaluación completa y un plan claro, explicado con calma y sin apuros.</p></li>
       </ol>
+    </section>
+
+    <!-- ============ PAGO ============ -->
+    <section class="pay-wrap" id="pago" aria-labelledby="pago-title">
+      <div class="container section pay">
+        <header class="pay__head reveal">
+          <p class="eyebrow">Pago de la teleconsulta</p>
+          <h2 class="h2" id="pago-title">Abone su consulta<br>con Mercado Pago.</h2>
+          <p class="section__intro">Una vez coordinado el turno por WhatsApp, transfiera los honorarios al alias indicado y envíe el comprobante. Al acreditarse el pago, le envío el enlace de la videollamada.</p>
+        </header>
+
+        <div class="pay__box reveal">
+          <div class="pay__row">
+            <span class="pay__label">Monto</span>
+            <span class="pay__amount">$40.000</span>
+          </div>
+          <div class="pay__row">
+            <span class="pay__label">Alias de Mercado Pago</span>
+            <div class="pay__alias">
+              <code id="mp-alias">jose.alvarez.mp</code>
+              <button class="btn btn--line btn--sm pay__copy" type="button" data-copy="mp-alias" aria-describedby="copy-status">Copiar alias</button>
+            </div>
+            <span class="pay__status" id="copy-status" role="status" aria-live="polite"></span>
+          </div>
+
+          <ol class="pay__steps">
+            <li>Copie el alias.</li>
+            <li>Abra Mercado Pago (o su app bancaria) y elija <strong>Transferir</strong>.</li>
+            <li>Pegue el alias, verifique el titular e ingrese <strong>$40.000</strong>.</li>
+            <li>Envíe el comprobante por WhatsApp.</li>
+          </ol>
+
+          <div class="pay__actions">
+            <!-- Opcional: si crea un "Link de pago" de $40.000 en Mercado Pago, péguelo en data-link y aparecerá el botón "Pagar con Mercado Pago". -->
+            <a class="btn btn--dark" id="mp-link" data-link="" href="#" target="_blank" rel="noopener" hidden>Pagar con Mercado Pago <span class="arrow">→</span></a>
+            <a class="btn btn--dark" id="mp-open" href="https://www.mercadopago.com.ar/" target="_blank" rel="noopener">Abrir Mercado Pago <span class="arrow">→</span></a>
+            <!-- Reemplazar 549XXXXXXXXXX por el número con código de país, sin + ni espacios -->
+            <a class="btn btn--line" href="https://wa.me/549XXXXXXXXXX?text=Hola%20Dra.%20Herrera%2C%20le%20env%C3%ADo%20el%20comprobante%20de%20pago%20de%20la%20teleconsulta%20(%2440.000)." target="_blank" rel="noopener">Enviar comprobante</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ============ PREGUNTAS ============ -->
@@ -208,7 +249,7 @@
           </details>
           <details>
             <summary>¿Cómo y cuándo se abona la teleconsulta?<span class="plus" aria-hidden="true">+</span></summary>
-            <p>El pago se realiza antes de la consulta, por transferencia bancaria o Mercado Pago. Durante noviembre de 2026 los honorarios son de $40.000. Una vez acreditado el pago, le envío el enlace de la videollamada.</p>
+            <p>El pago se realiza antes de la consulta, por Mercado Pago al alias jose.alvarez.mp (<a class="link" href="#pago">ver datos de pago</a>). Durante noviembre de 2026 los honorarios son de $40.000. Una vez acreditado el pago, le envío el enlace de la videollamada.</p>
           </details>
           <details>
             <summary>¿Una teleconsulta es tan completa como una consulta presencial?<span class="plus" aria-hidden="true">+</span></summary>

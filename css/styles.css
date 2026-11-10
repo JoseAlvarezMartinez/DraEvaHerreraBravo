@@ -366,6 +366,41 @@ hgroup { margin: 0; }
 .steps.is-entering li:nth-child(3) { animation-delay: .12s; }
 .steps.is-entering li:nth-child(4) { animation-delay: .18s; }
 
+/* ---------- Pago ---------- */
+.pay-wrap { border-top: 1px solid var(--line); }
+.pay { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 64px; }
+.pay__head { flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+.pay__box {
+  flex: 1 1 460px;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.pay__row { display: flex; flex-direction: column; gap: 10px; }
+.pay__label { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.pay__amount { font-size: 52px; font-weight: 300; letter-spacing: -.03em; line-height: 1; }
+.pay__alias { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.pay__alias code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 20px;
+  padding: 10px 16px;
+  background: var(--bg-soft);
+  border-radius: 10px;
+  color: var(--accent);
+  word-break: break-all;
+}
+.pay__copy { cursor: pointer; background: transparent; font-family: inherit; }
+.pay__status { font-size: 13px; color: var(--accent); min-height: 1em; }
+.pay__steps { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.6; color: var(--muted); font-weight: 300; border-top: 1px solid var(--line-soft); padding-top: 24px; }
+.pay__steps strong { color: var(--ink); font-weight: 500; }
+.pay__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.pay__actions [hidden] { display: none; }
+
 /* ---------- Preguntas ---------- */
 .faq-wrap { border-top: 1px solid var(--line); }
 .faq { display: flex; flex-wrap: wrap; gap: 64px; }

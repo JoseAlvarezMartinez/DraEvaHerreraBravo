@@ -98,6 +98,42 @@
     animated.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  /* ---------- Pago: copiar alias y link de pago opcional ---------- */
+  var copyBtn = document.querySelector('[data-copy]');
+  var copyStatus = document.getElementById('copy-status');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function () {
+      var src = document.getElementById(copyBtn.getAttribute('data-copy'));
+      var text = src ? src.textContent.trim() : '';
+      function done(ok) {
+        copyBtn.textContent = ok ? '¡Copiado!' : 'Copiar alias';
+        if (copyStatus) copyStatus.textContent = ok ? 'Alias copiado: ' + text : 'No se pudo copiar. Seleccione el alias y cópielo manualmente.';
+        if (ok) setTimeout(function () { copyBtn.textContent = 'Copiar alias'; }, 2500);
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+      } else {
+        var range = document.createRange();
+        range.selectNodeContents(src);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) {}
+        done(ok);
+      }
+    });
+  }
+
+  var mpLink = document.getElementById('mp-link');
+  var mpOpen = document.getElementById('mp-open');
+  var linkUrl = mpLink && mpLink.getAttribute('data-link');
+  if (linkUrl) {
+    mpLink.href = linkUrl;
+    mpLink.hidden = false;
+    if (mpOpen) mpOpen.hidden = true;
+  }
+
   /* ---------- Año automático en el footer ---------- */
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
