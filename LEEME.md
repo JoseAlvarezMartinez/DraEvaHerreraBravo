@@ -24,6 +24,7 @@ Buscá los textos entre corchetes y reemplazalos:
 - `549XXXXXXXXXX` → número de WhatsApp con código de país, sin `+` ni espacios (ej.: 5491122334455)
 - `[EMAIL]` y `[EMAIL DE CONTACTO]`
 - `[USUARIO]` → usuario de Instagram
+- **Testimonios:** los de la sección `#testimonios` son ficticios, de ejemplo. Reemplazalos por testimonios reales (con consentimiento del paciente) o quitá la sección, y borrá la nota "Testimonios de ejemplo".
 
 Recordá actualizar los honorarios de la teleconsulta ($40.000, noviembre 2026) cuando cambien.
 

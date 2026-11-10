@@ -177,7 +177,8 @@ hgroup { margin: 0; }
 .mobile-menu__item:nth-child(2) { animation-delay: .1s; }
 .mobile-menu__item:nth-child(3) { animation-delay: .15s; }
 .mobile-menu__item:nth-child(4) { animation-delay: .2s; }
-.mobile-menu__cta { margin-top: 24px; opacity: 0; animation: drop .5s var(--ease) .25s forwards; }
+.mobile-menu__item:nth-child(5) { animation-delay: .25s; }
+.mobile-menu__cta { margin-top: 24px; opacity: 0; animation: drop .5s var(--ease) .3s forwards; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -366,6 +367,31 @@ hgroup { margin: 0; }
 .steps.is-entering li:nth-child(3) { animation-delay: .12s; }
 .steps.is-entering li:nth-child(4) { animation-delay: .18s; }
 
+/* ---------- Testimonios ---------- */
+#testimonios { display: flex; flex-direction: column; gap: 56px; }
+.quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px; }
+.quote {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform .5s var(--ease), border-color .5s;
+}
+.quote:hover { transform: translateY(-6px); border-color: var(--ink); }
+.quote__mark { font-size: 64px; line-height: .6; height: 28px; color: var(--accent); font-weight: 300; }
+.quote blockquote { margin: 0; flex: 1; }
+.quote blockquote p { font-size: 17px; line-height: 1.65; color: var(--body); font-weight: 300; }
+.quote figcaption { display: flex; flex-direction: column; gap: 4px; padding-top: 20px; border-top: 1px solid var(--line-soft); }
+.quote__name { font-size: 15px; font-weight: 500; }
+.quote__meta { font-size: 13px; color: var(--accent); }
+.quotes__note { font-size: 13px; color: var(--muted); font-style: italic; }
+.js .quotes .reveal:nth-child(2) { transition-delay: .1s; }
+.js .quotes .reveal:nth-child(3) { transition-delay: .2s; }
+
 /* ---------- Pago ---------- */
 .pay-wrap { border-top: 1px solid var(--line); }
 .pay { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 64px; }
@@ -512,6 +538,7 @@ hgroup { margin: 0; }
   .hero { padding-top: 48px; padding-bottom: 64px; gap: 48px; }
   .section { padding-top: 80px; padding-bottom: 80px; }
   .card { padding: 28px; }
+  .quote { padding: 28px; }
   .marquee__track { font-size: 18px; gap: 40px; }
   .contact__actions { min-width: 0; width: 100%; }
   .about { gap: 40px; }
