@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=2026-11-10">
+  <link rel="stylesheet" href="css/styles.css?v=2026-11-11">
 </head>
 <body>
 
@@ -60,27 +60,54 @@
 
     <!-- ============ HERO ============ -->
     <section class="container hero" id="inicio" aria-labelledby="hero-title">
+      <!-- Fondo animado: grilla de puntos, auroras y foco que sigue al cursor -->
+      <div class="hero__bg" id="hero-bg" aria-hidden="true">
+        <div class="hero__aurora"></div>
+        <div class="hero__aurora hero__aurora--2"></div>
+        <div class="hero__grid"></div>
+        <div class="hero__grid hero__grid--lit"></div>
+        <div class="hero__spot"></div>
+      </div>
+
       <header class="hero__text">
         <p class="eyebrow rise d1">Médica cirujana · Cirugía general</p>
-        <h1 class="hero__title rise d2" id="hero-title">Su salud, respaldada<br><span class="accent">por experiencia y dedicación.</span></h1>
+        <h1 class="hero__title" id="hero-title">Su salud, respaldada<br><span class="accent">por experiencia y dedicación.</span></h1>
         <p class="hero__lead rise d3">Soy la Dra. Eva Maria Herrera Bravo, médica cirujana. Atiendo en mi consultorio y por videollamada, con el tiempo necesario para escucharlo, explicarle cada paso con claridad y acompañarlo hasta su recuperación.</p>
         <div class="hero__actions rise d4">
-          <a class="btn btn--dark" href="#contacto">Solicitar teleconsulta <span class="arrow">→</span></a>
-          <a class="btn btn--line" href="#modalidades">Turno en consultorio</a>
+          <a class="btn btn--dark" href="#contacto" data-magnetic>Solicitar teleconsulta <span class="arrow">→</span></a>
+          <a class="btn btn--line" href="#modalidades" data-magnetic>Turno en consultorio</a>
         </div>
         <p class="hero__trust rise d5">Atención personalizada · Explicaciones claras · Seguimiento después de cada consulta</p>
       </header>
 
       <!-- Latido animado (solo desktop) -->
       <div class="hero__visual rise d5" aria-hidden="true">
-        <div class="pulse">
+        <div class="pulse" id="pulse">
           <div class="pulse__ring"></div>
           <div class="pulse__ring pulse__ring--2"></div>
+          <div class="pulse__orbit"></div>
+          <div class="pulse__orbit pulse__orbit--2"></div>
           <div class="pulse__disc"></div>
-          <svg class="pulse__svg" viewBox="0 0 400 160">
+          <!-- Trazo ECG sincronizado con un punto luminoso (SMIL) -->
+          <svg class="pulse__svg" id="pulse-svg" viewBox="0 0 400 160">
             <path class="ecg-base" d="M0 80 H120 L138 80 L150 40 L164 128 L178 20 L194 112 L206 80 H260 L272 70 L284 80 H400"/>
-            <path class="ecg" d="M0 80 H120 L138 80 L150 40 L164 128 L178 20 L194 112 L206 80 H260 L272 70 L284 80 H400"/>
+            <path class="ecg-live ecg-live--glow" pathLength="900" d="M0 80 H120 L138 80 L150 40 L164 128 L178 20 L194 112 L206 80 H260 L272 70 L284 80 H400">
+              <animate attributeName="stroke-dashoffset" values="900;0;-900" keyTimes="0;.55;1" calcMode="spline" keySplines=".6 0 .4 1;.6 0 .4 1" dur="3.6s" repeatCount="indefinite"/>
+            </path>
+            <path class="ecg-live" id="ecg-path" pathLength="900" d="M0 80 H120 L138 80 L150 40 L164 128 L178 20 L194 112 L206 80 H260 L272 70 L284 80 H400">
+              <animate attributeName="stroke-dashoffset" values="900;0;-900" keyTimes="0;.55;1" calcMode="spline" keySplines=".6 0 .4 1;.6 0 .4 1" dur="3.6s" repeatCount="indefinite"/>
+            </path>
+            <g class="ecg-dot">
+              <circle class="ecg-dot__halo" r="11"/>
+              <circle class="ecg-dot__core" r="3.5"/>
+              <animateMotion dur="3.6s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.55;1" calcMode="spline" keySplines=".6 0 .4 1;0 0 1 1"><mpath href="#ecg-path"/></animateMotion>
+              <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.52;.6;1" dur="3.6s" repeatCount="indefinite"/>
+            </g>
           </svg>
+          <div class="pulse__chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            Seguimiento personalizado
+          </div>
           <div class="pulse__badge"><span class="dot"></span>Teleconsulta desde su casa</div>
         </div>
       </div>
@@ -132,7 +159,7 @@
             <p>Consulte sin moverse de su casa: sin viajes ni salas de espera. Ideal para una primera consulta, revisar estudios, pedir una segunda opinión o continuar su seguimiento.</p>
           </div>
           <p class="price">
-            <data class="price__value" value="40000">$40.000</data>
+            <data class="price__value" value="33000" data-count>$33.000</data>
             <span class="price__note">honorarios vigentes durante <time datetime="2026-11">noviembre de 2026</time></span>
           </p>
           <dl class="specs">
@@ -183,7 +210,7 @@
 
       <ol class="steps" id="steps-tele" role="tabpanel" aria-labelledby="tab-tele">
         <li class="reveal"><span class="steps__n" aria-hidden="true">01</span><h3>Contáctese</h3><p>Escríbame por WhatsApp contándome su consulta. Le respondo para coordinar el día y horario que mejor le queden.</p></li>
-        <li class="reveal"><span class="steps__n" aria-hidden="true">02</span><h3>Confirme su turno</h3><p>Abone $40.000 por Mercado Pago al alias <a class="link" href="#pago">jose.alvarez.mp</a>. El pago se realiza antes de la cita.</p></li>
+        <li class="reveal"><span class="steps__n" aria-hidden="true">02</span><h3>Confirme su turno</h3><p>Abone $33.000 por Mercado Pago al alias <a class="link" href="#pago">jose.alvarez.mp</a>. El pago se realiza antes de la cita.</p></li>
         <li class="reveal"><span class="steps__n" aria-hidden="true">03</span><h3>Reciba el enlace</h3><p>Le envío por WhatsApp un enlace simple. Solo tiene que tocarlo a la hora acordada.</p></li>
         <li class="reveal"><span class="steps__n" aria-hidden="true">04</span><h3>Consulta y plan</h3><p>Conversamos por video, revisamos sus estudios y se lleva indicaciones claras y un plan a seguir.</p></li>
       </ol>
@@ -258,7 +285,7 @@
         <div class="pay__box reveal">
           <div class="pay__row">
             <span class="pay__label">Monto</span>
-            <data class="pay__amount" value="40000">$40.000</data>
+            <data class="pay__amount" value="33000" data-count>$33.000</data>
           </div>
           <div class="pay__row">
             <span class="pay__label">Alias de Mercado Pago</span>
@@ -272,12 +299,12 @@
           <ol class="pay__steps">
             <li>Copie el alias.</li>
             <li>Abra Mercado Pago (o su app bancaria) y elija <strong>Transferir</strong>.</li>
-            <li>Pegue el alias, verifique el titular e ingrese <strong>$40.000</strong>.</li>
+            <li>Pegue el alias, verifique el titular e ingrese <strong>$33.000</strong>.</li>
             <li>Envíe el comprobante por WhatsApp.</li>
           </ol>
 
           <div class="pay__actions">
-            <!-- Opcional: si crea un "Link de pago" de $40.000 en Mercado Pago, péguelo en data-link y aparecerá el botón "Pagar con Mercado Pago". -->
+            <!-- Opcional: si crea un "Link de pago" de $33.000 en Mercado Pago, péguelo en data-link y aparecerá el botón "Pagar con Mercado Pago". -->
             <a class="btn btn--dark" id="mp-link" data-link="" href="#" target="_blank" rel="noopener" hidden>Pagar con Mercado Pago <span class="arrow">→</span></a>
             <a class="btn btn--dark" id="mp-open" href="https://www.mercadopago.com.ar/" target="_blank" rel="noopener">Abrir Mercado Pago <span class="arrow">→</span></a>
             <!-- Reemplazar 549XXXXXXXXXX por el número con código de país, sin + ni espacios -->
@@ -301,7 +328,7 @@
           </details>
           <details>
             <summary>¿Cómo y cuándo se abona la teleconsulta?<span class="plus" aria-hidden="true">+</span></summary>
-            <p>El pago se realiza antes de la consulta, por Mercado Pago al alias jose.alvarez.mp (<a class="link" href="#pago">ver datos de pago</a>). Durante <time datetime="2026-11">noviembre de 2026</time> los honorarios son de $40.000. Una vez acreditado el pago, le envío el enlace de la videollamada.</p>
+            <p>El pago se realiza antes de la consulta, por Mercado Pago al alias jose.alvarez.mp (<a class="link" href="#pago">ver datos de pago</a>). Durante <time datetime="2026-11">noviembre de 2026</time> los honorarios son de $33.000. Una vez acreditado el pago, le envío el enlace de la videollamada.</p>
           </details>
           <details>
             <summary>¿Una teleconsulta es tan completa como una consulta presencial?<span class="plus" aria-hidden="true">+</span></summary>
@@ -319,6 +346,7 @@
     <section class="contact-wrap" id="contacto" aria-labelledby="contacto-title">
       <div class="container">
         <div class="contact reveal">
+          <div class="contact__glow" aria-hidden="true"></div>
           <svg class="contact__ecg" viewBox="0 0 400 160" aria-hidden="true">
             <path class="ecg" d="M0 80 H120 L138 80 L150 40 L164 128 L178 20 L194 112 L206 80 H260 L272 70 L284 80 H400"/>
           </svg>
@@ -328,7 +356,7 @@
           </header>
           <address class="contact__actions">
             <!-- Reemplazar 549XXXXXXXXXX por el número con código de país, sin + ni espacios -->
-            <a class="btn btn--light" href="https://wa.me/549XXXXXXXXXX?text=Hola%20Dra.%20Herrera%2C%20quisiera%20solicitar%20un%20turno." target="_blank" rel="noopener">Escribir por WhatsApp <span class="arrow">→</span></a>
+            <a class="btn btn--light" href="https://wa.me/549XXXXXXXXXX?text=Hola%20Dra.%20Herrera%2C%20quisiera%20solicitar%20un%20turno." target="_blank" rel="noopener" data-magnetic>Escribir por WhatsApp <span class="arrow">→</span></a>
             <a class="btn btn--ghost" href="mailto:[EMAIL]">[EMAIL DE CONTACTO]</a>
           </address>
         </div>
@@ -348,6 +376,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=2026-11-10" defer></script>
+  <script src="js/main.js?v=2026-11-11" defer></script>
 </body>
 </html>
